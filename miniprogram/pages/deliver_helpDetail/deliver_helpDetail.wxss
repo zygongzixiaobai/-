@@ -1,0 +1,79 @@
+page{
+    height: 100%;
+}
+
+.item-detail{
+    padding-bottom:110rpx ;
+}
+
+.title{
+    display: flex;
+    margin-bottom: 100rpx;
+}
+
+.detail{
+    font-size: 15px;
+}
+
+.name{
+    font-size: 30px;
+    text-align: center;
+
+    width: 100%;
+}
+
+
+.profile{
+    width: 250rpx;
+    height: 250rpx;
+    align-items: center;
+
+}
+
+.pic{
+    width: 320rpx;
+    height:320rpx;
+}
+
+.help{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30rpx;
+}
+
+.get{
+    display: flex;
+    background-color: #30d0ec;
+    border: solid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+.button{
+    width:100rpx;
+    height: 100rpx;
+}
+
+.line{
+    width: 96%;
+    height: 10rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0rpx 2% 0rpx 2%;
+}
+
+.line view {
+    width: 50%;
+    height: 5rpx;
+    background: linear-gradient(to right, #b1d4e9, #30d0ec);
+  }
+
+.information{
+    margin: 35rpx 0 35rpx 0;
+    padding-left: 50rpx;
+}

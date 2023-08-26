@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+      "deliverCard":"../../components/deliverCard/deliverCard"
+    }
+  }

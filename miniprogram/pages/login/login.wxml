@@ -1,0 +1,28 @@
+<view id="login">
+
+  <block wx:if="{{canIUseOpenData}}">
+      <view class="userAvatar">
+        <open-data type="userAvatarUrl"/>
+      </view>
+  </block>
+
+  <view class="userinfo_input">
+    <view class="content">
+  <view class="account">
+    <view class="title">account</view>
+    <view class="number"><input bindinput="accountInput" placeholder="请输入用户名" placeholder-style="color:#999999;"/></view>
+  </view>
+  <view class="account">
+    <view class="title">passwd</view>
+    <view class="number"><input bindiblur="pwdBlur" placeholder="请输入密码" password placeholder-style="color:#999999;"/></view>
+  </view>
+  <view class="hr"></view>
+  <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" bindtap="mylogin">登录</button>
+
+</view>
+  </view>
+  <view class="team_name">
+    <text>@浙 江 大 学 校 园 互 助 代 送</text>
+  </view>
+  <van-toast id="van-toast" />
+</view>

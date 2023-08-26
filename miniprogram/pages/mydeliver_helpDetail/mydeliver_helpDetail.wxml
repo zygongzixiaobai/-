@@ -1,0 +1,30 @@
+<view class="item-detail">
+    <view class="title">
+        <view class="profile" style="background-color: {{color}};">
+            <image class="pic" src="{{imgUrl}}" mode="aspectFill"></image>
+        </view>
+        <view class="name"><!-- 物品名称： -->{{name}}</view>
+    </view>
+    <view class="detail">
+        <view class="information">发布时间：{{time}}</view>
+        <view class="line"><view></view><view></view></view>
+        <view class="information">驿站地址：{{itemAddress}}</view>
+        <view class="line"><view></view><view></view></view>
+        <view class="information">收件人地址：{{userAddress}}</view>
+        <view class="line"><view></view><view></view></view>
+        <view class="information">包裹大小：{{size}}</view>
+        <view class="line"><view></view><view></view></view>
+        <view class="information">取件码：{{code}}</view>
+        <view class="line"><view></view><view></view></view>
+        <view class="help">
+            <view class="get">
+                <text>成功取件</text>
+                <image src="../../images/help.png" catchtap="GetHelp" class="button"></image>        
+            </view>
+            <view class="del">
+                <text>取消取件</text>       
+                <image src="../../images/delete.png" catchtap="deleteHelp" class="button"></image>      
+            </view>
+        </view>
+    </view>
+</view>

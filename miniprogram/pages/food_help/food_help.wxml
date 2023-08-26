@@ -1,0 +1,6 @@
+<view style="padding: 20rpx;"></view>
+<view>
+    <view wx:for="{{info}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <foodCard item="{{item}}"/>
+    </view>
+</view> 

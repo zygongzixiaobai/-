@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "myfoodCard":"../../components/myfoodCard/myfoodCard",
+    "mydeliverCard":"../../components/mydeliverCard/mydeliverCard"
+  },
+  "navigationBarTitleText": "订单"
+  
+}

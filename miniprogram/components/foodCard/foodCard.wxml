@@ -1,0 +1,24 @@
+<view bindtap="handleHot">
+    <view class="content">
+        <view class="profile">
+            <image class="pic" mode="aspectFit" src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="song-list">
+            <view class="song">
+                <view>
+                    <text>外卖名称:</text>
+                    <text>{{item.name}}</text>
+                </view>
+                <view>
+                    <text>发布时间：</text>
+                    <text>{{item.time}}</text>
+                </view>
+                <view>
+                    <text>外卖地址：</text>
+                    <text>{{item.itemAddress}}</text>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>

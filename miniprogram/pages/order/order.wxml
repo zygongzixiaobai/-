@@ -1,0 +1,31 @@
+<view class="tab-wrap">
+	<!-- 导航 -->
+	<view class="nav-wrap">
+		<view bindtap="activeNav" data-index="{{index}}" class="nav-item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}"
+		 wx:key="index">
+			<text>{{item.text}}</text>
+		</view>
+		<!-- 子导航 -->
+		<!-- 发布内的 -->
+		<view hidden="{{currentIndexNav!==0}}" bindtap="activeNavChild" data-index="{{index}}" class="navChild-item {{index===currentIndexNav1?'active':''}}"
+		 wx:for="{{navchildList1}}" wx:key="index">
+			<text>{{item.text}}</text>
+		</view>
+		<!-- 接单内的 -->
+		<view hidden="{{currentIndexNav!==1}}" bindtap="activeNavChild" data-index="{{index}}" class="navChild-item {{index===currentIndexNav1?'active':''}}"
+		 wx:for="{{navchildList2}}" wx:key="index">
+			<text>{{item.text}}</text>
+		</view>
+	</view>
+	<!-- 订单列表 -->
+    <view wx:for="{{info1}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <myfoodCard item="{{item}}"/>
+    </view>
+	<view wx:for="{{info2}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <mydeliverCard item="{{item}}"/>
+    </view>
+	<view><text style="text-align: center;position: relative;top: -55rpx;">
+			没有更多了(#^ . ^#)~
+	</text></view>
+		
+</view>

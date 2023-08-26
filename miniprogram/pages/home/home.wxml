@@ -1,0 +1,39 @@
+<view class="page">
+	<!-- 轮播图 -->
+	<view class="slides">
+	  <swiper indicator-dots circular autoplay interval="2000">
+	    <swiper-item wx:for="{{movies}}" wx:key="index">
+	      <navigator url="https://www.zju.edu.cn/">
+	        <image mode="aspectFill" src="{{item.url}}"></image>
+	      </navigator>
+	    </swiper-item>
+	  </swiper>
+	</view>
+	<!-- 功能区 -->
+	<view class="page_bd">
+		<view class="box">
+			<!-- 业务1 -->
+			<navigator class="box_item1" url="/pages/deliver_help/deliver_help?index={{0}}" hover-class="none">
+				<image src="../../images/home/sale.png" class="itemsImage"></image> 
+				<text>快递代取</text>
+			</navigator>
+			<!-- 业务2 -->
+			<navigator class="box_item2" url="/pages/food_help/food_help?index={{1}}" hover-class="none">
+				<image src="../../images/home/skill.png" class="itemsImage"></image> 
+				<text>外卖代取</text>
+			</navigator>
+		</view>
+		<view class="box">
+			<!-- 业务3 -->
+			<navigator class="box_item3" url="/pages/deliveryDetail/deliveryDetail?index={{2}}" hover-class="none">
+				<image src="../../images/home/taking.png" class="itemsImage"></image> 
+				<text>快递发布</text>
+			</navigator>
+			<!-- 业务4 -->
+			<navigator class="box_item4" url="/pages/foodDetail/foodDetail?index={{3}}" hover-class="none">
+				<image src="../../images/home/car.png" class="itemsImage"></image> 
+				<text>外卖发布</text>
+			</navigator>
+		</view>
+	</view>
+</view>
