@@ -1,5 +1,9 @@
 <!-- 未开发节面 -->
-<view class="blank">
-    <image src="../../images/blank.png" mode="aspectFit"></image>
-    <view>暂无数据TwT</view>
+    <!-- <image src="../../images/blank.png" mode="aspectFit"></image>
+    <view>暂无数据TwT</view> -->
+<view>
+    <view class="recordCard">
+        {{recordPath}}
+    </view>
+    <button bindtap="play">播放语音</button>
 </view>

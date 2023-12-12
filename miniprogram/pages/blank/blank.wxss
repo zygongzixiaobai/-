@@ -15,7 +15,11 @@ page{
     margin-bottom: 50rpx;
 }
 
-.blank view{
+/* .blank view{
     font-size: large;
     color: #5ec4f7;
+} */
+.recordCard {
+    display: flex;
+    width: 50px;
 }

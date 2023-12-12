@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="page-body-time">
+          <text class="time-big">{{formatedRecordTime}}</text>
+    </view>
+    <button type="primary" bindtap="start">开始录音</button>
+    <button type="primary" bindtap="suspend">录音暂停</button>
+    <button type="primary" bindtap="continue">继续录音</button>
+    <button type="primary" bindtap="stop">录音停止</button>
+    <button type="primary" bindtap="play">播放录音</button>
+    <button type="primary" bindtap="save">保存录音</button>
+    <navigator url="../foodDetail/foodDetail?tempFilePath={{tempFilePath}}&condition=1" >
+        确定
+    </navigator>
+</view>

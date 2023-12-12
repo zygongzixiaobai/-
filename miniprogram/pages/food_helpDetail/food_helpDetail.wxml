@@ -14,7 +14,7 @@
         <view class="line"><view></view><view></view></view>
         <view class="information">外卖大小：{{size}}</view>
         <view class="line"><view></view><view></view></view>
-        <view class="information">取餐码：{{code}}</view>
+        <view class="information">取餐：{{code}}</view>
         <view class="line"><view></view><view></view></view>
         <view class="help">
             <view class="get">

@@ -1,36 +1,32 @@
 <!--pages/castDetail/castDetail.wxml-->
 <view class="page">
-   <view class="Basic"> 填写外卖信息</view>
+   <view class="Basic"> 填写语音信息</view>
    <view class="NormalElement">
-                    <view class="label1"><view>外卖名称</view></view>
-                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" placeholder="请输入外卖的名称" bindinput="nameInput" /></view>
+                    <view class="label1"><view>语音名称</view></view>
+                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" placeholder="请输入语音的名称" bindinput="nameInput" /></view>
                     <view class="view_fengexian">
 	                 <view ></view><view ></view>
                     </view>
-                    <view class="label1"> <view>取餐地址</view> </view>
-                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" id="password" placeholder="如：蓝田取餐柜" bindinput="itemInput"/></view>
+                    <view class="label1"> <view>内容简介</view> </view>
+                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" id="password" placeholder="如：一段新闻" bindinput="itemInput"/></view>
                     <view class="view_fengexian">
 	                 <view ></view><view ></view>
                     </view>
-                    <view class="label1"><view>用户地址</view></view>
-                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" id="password_ensure" placeholder="如：碧峰2舍" bindinput="userInput" /></view>
+                    <view class="label1"><view>语言类型</view></view>
+                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" id="password_ensure" placeholder="" bindinput="userInput" /></view>
                     <view class="view_fengexian">
 	                 <view ></view><view ></view>
                     </view>
-                    <view class="label1"> <view>外卖大小</view> </view>
-                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" id="password_ensure" placeholder="请描述外卖大小" placeholder-class="placeItem" bindinput="sizeInput" /></view>
-                    <view class="view_fengexian">
-	                 <view ></view><view ></view>
-                    </view>
-                    <view class="label1"> <view>取餐码</view> </view>
-                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" id="password_ensure" placeholder="如：一号柜86号" placeholder-class="placeItem" bindinput="codeInput" /></view>
+                    <view class="label1"> <view>上传时间</view> </view>
+                    <view class="text"><input type="text" style="width: 158px; height: 25px;" name="message" id="password_ensure" placeholder="" placeholder-class="placeItem" bindinput="sizeInput" /></view>
                     <view class="view_fengexian">
 	                 <view ></view><view ></view>
                     </view>
                 </view>
-   <button style="width: 150px; background-color: #14dbe9;"  class="uploadTip" bindtap="upload" type="primary"> 上传外卖图片 </button>
-   <view>
-      <image class="itemImage" src="{{imgUrl}}"></image>
+   <button style="width: 150px; background-color: #14dbe9;"  class="uploadTip" bindtap="upload" type="primary"> 上传检测语音 </button>
+   <view wx:if="{{condition === 1}}"> 
+   <text>{{tempFilePath}}</text>
    </view>
-   <button style="width: 150px; background-color: #14dbe9; margin-bottom: 50px;"  class="uploadTip" bindtap="public" type="primary"> 发布 </button>
+   <button style="width: 150px; background-color: #14dbe9;"  class="uploadTip" bindtap="playRecord" type="primary"> 播放语音 </button>
+   <button style="width: 150px; background-color: #14dbe9; margin-bottom: 50px;"  class="uploadTip" bindtap="public" type="primary"> 开始检测 </button>
 </view>

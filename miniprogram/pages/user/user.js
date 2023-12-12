@@ -1,7 +1,8 @@
-
+const app = getApp()
 Page({
 	data: {
-      username:"juber",
+      username:"",
+      avatarUrl:'',
       point:"10",
       fansNumber:"10",
       src:"../image/头像.jpg",
@@ -9,13 +10,17 @@ Page({
       bonus:3,
       friend:5,
       address:2,
+      userInfo:{}
   },
   GotoBlank:function(){
     wx.navigateTo({
-      url: '../blank/blank',
+      url: '/pages/blank/blank',
     })
   },
 	onLoad:function() {
-		
+        this.setData({
+            username:app.globalData.username,
+            avatarUrl:app.globalData.avatarUrl
+        })
 	},
 });

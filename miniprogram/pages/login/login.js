@@ -1,6 +1,6 @@
 // pages/login/login.js
 const app = getApp()
-
+const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
 Page({
 
   /**
@@ -11,11 +11,27 @@ Page({
     hasuserinfo: false,
     stuID: null,
     password: null,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl'),
+    canIUseOpenData: true,
     disabled:true,
     btnstate:"default",
     account:"",
-    password:""
+    password:"",
+    avatarUrl: defaultAvatarUrl,
+    theme: wx.getSystemInfoSync().theme,
+  },
+
+  onChooseAvatar(e) {
+    const { avatarUrl } = e.detail 
+    this.setData({
+      avatarUrl,
+    })
+    app.globalData.avatarUrl = this.data.avatarUrl
+  },
+
+  getAvatar(){
+      this.setData({
+          canIUseOpenData:false
+      })
   },
 
   mylogin:function(){
@@ -31,6 +47,8 @@ Page({
     }else{
       this.setData({disabled:true,btnstate:"default"});
     }
+    app.globalData.username = this.data.account
+    console.log('username is', app.globalData.username)
   },
   pwdBlur:function(e){
     var password= e.detail.value;
@@ -43,7 +61,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (wx.getUserProfile) {
+        console.log("ok")
+      }
     //已有用户信息则不进行登录验证
     if(app.globalData.hasUserinfo){
       wx.reLaunch({

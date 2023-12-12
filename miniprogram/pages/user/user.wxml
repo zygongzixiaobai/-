@@ -1,40 +1,14 @@
 <view class="body">
     <view class="page_head">
         <view class="head">
-            <open-data class="headImage" type="userAvatarUrl"/>
+            <image class="headImage" src="{{avatarUrl}}"></image>
                 <view class="username">
-                {{username}}
-                <text>\n</text>
+                <view>{{username}}</view>
                 积分：{{point}}
                 </view>
         </view>
     </view>
-    <view class="info">
-        <view class="info-detail">
-            <text>{{friend}}</text>
-            <text>好友</text>
-        </view>
-        <view class="line"></view>
-        <view class="info-detail">
-            <text>{{address}}</text>
-            <text>地址簿</text>
-        </view>
-        <view class="line"></view>
-        <view class="info-detail">
-            <text>{{bonus}}</text>
-            <text>红包卡券</text>
-        </view>
-    </view>
-  <view class="taskAndVip">
-    <view class="task">
-    <image class="taskAndVIPImage"  src="../../images/task.png"></image>
-     <view class="tavText" style="margin-right: 40rpx; margin-top: 40rpx;">{{task}}</view>
-    </view>
-    <view class="VIP">
-    <image class="taskAndVIPImage" src="../../images/VIP.png"></image>
-    <view class="tavText" style="margin-right: 40rpx; margin-top: 40rpx;">会员中心</view>
-    </view>
-  </view>
+   
   <view class="detail">
     <view class="line3"></view>
     <view class="table" bindtap="GotoBlank">
@@ -44,17 +18,12 @@
     </view>
     <view class="line2"></view>
     <view class="table" bindtap="GotoBlank">
-        <image src="../../images/dizhi.png"></image>
-        <view>收货地址</view>
+        <image src="../../images/history.png"></image>
+        <view>历史查询</view>
         <image src="../../images/xiala.png" style="margin-left:auto"></image>
     </view>
     <view class="line2"></view>
-    <view class="table" bindtap="GotoBlank">
-        <image src="../../images/yue.png"></image>
-        <view>账户充值</view>
-        <image src="../../images/xiala.png" style="margin-left:auto"></image>
-    </view>
-    <view class="line3"></view>
+
     <view class="table" bindtap="GotoBlank">
         <image src="../../images/fankui.png"></image>
         <view>意见反馈</view>

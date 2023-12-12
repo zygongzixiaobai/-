@@ -17,6 +17,8 @@ Page({
         code:'',
         userName:'',
         done:false,
+        tempFilePath:'',//录音路径
+        condition:0,//是否录音完成
     },
     nameInput: function(e){this.setData({name: e.detail.value});}, 
     itemInput: function(e){this.setData({itemAddress: e.detail.value});console.log(this.data.itemAddress)}, 
@@ -25,12 +27,12 @@ Page({
     codeInput: function(e){this.setData({code: e.detail.value});},
     public:function(){
       const db = wx.cloud.database({
-        env:'cloud1-3gro6l2yc2854ff6'
+        env:'cloud1-5gypewt8d4e49289'
     });
     this.data.time = util.formatTime(new Date());
     // 再通过setData更改Page()里面的data，动态更新页面的数据
     app.globalData.foodNumber = app.globalData.foodNumber + 1;
-    db.collection('foodList').add({
+    db.collection('List').add({
         data:{
             id:1,
             name:this.data.name,
@@ -83,27 +85,24 @@ Page({
      },
     
     upload(){
-        // let that = this;
-        // 选择一张图片
-        wx.chooseImage({
-          count: 1,
-          sizeType: ['original', 'compressed'],
-          sourceType: ['album', 'camera'],
-          success: (res) => {
-            // tempFilePath可以作为img标签的src属性显示图片
-            const tempFilePaths = res.tempFilePaths[0]
-            // that.uploadFile(tempFilePaths) 如果这里不是=>函数使用上面的that = this
-            // console.log(tempFilePaths)
-            this.setData({
-                imgUrl:tempFilePaths
-              })
-          },
-        })
-      },
+      wx.navigateTo({
+        url: '/pages/record/record',
+      })
+    },
+
+    playRecord(){
+        const innerAudioContext = wx.createInnerAudioContext();
+        innerAudioContext.src = this.data.tempFilePath;
+        innerAudioContext.play()
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        let temp = options.tempFilePath
+    //获取录音完成之后的数据
+    console.log('path is', this.tempFilePath);
+    console.log('conditon is', this.condition);
     },
 
     /**
@@ -117,7 +116,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.setData({
+            
+        })
     },
 
     /**

@@ -14,25 +14,13 @@
 		<view class="box">
 			<!-- 业务1 -->
 			<navigator class="box_item1" url="/pages/deliver_help/deliver_help?index={{0}}" hover-class="none">
-				<image src="../../images/home/sale.png" class="itemsImage"></image> 
-				<text>快递代取</text>
+				<!-- <image src="../../images/home/sale.png" class="itemsImage"></image>  -->
+				<text>样例查看</text>
 			</navigator>
 			<!-- 业务2 -->
-			<navigator class="box_item2" url="/pages/food_help/food_help?index={{1}}" hover-class="none">
-				<image src="../../images/home/skill.png" class="itemsImage"></image> 
-				<text>外卖代取</text>
-			</navigator>
-		</view>
-		<view class="box">
-			<!-- 业务3 -->
-			<navigator class="box_item3" url="/pages/deliveryDetail/deliveryDetail?index={{2}}" hover-class="none">
-				<image src="../../images/home/taking.png" class="itemsImage"></image> 
-				<text>快递发布</text>
-			</navigator>
-			<!-- 业务4 -->
-			<navigator class="box_item4" url="/pages/foodDetail/foodDetail?index={{3}}" hover-class="none">
-				<image src="../../images/home/car.png" class="itemsImage"></image> 
-				<text>外卖发布</text>
+			<navigator class="box_item2" url="../foodDetail/foodDetail?index={{1}}" hover-class="none">
+				<!-- <image src="../../images/home/skill.png" class="itemsImage"></image>  -->
+				伪造检测
 			</navigator>
 		</view>
 	</view>

@@ -1,8 +1,9 @@
 /* pages/castDetail/castDetail.wxss */
 .uploadTip {
     display: flexbox;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 50px;
+    margin-bottom: 20px;
 }
 
 .input {
@@ -89,6 +90,12 @@
       height: 700rpx;
       /* border: solid; */
       margin-left: 7px;
+  }
+
+  .uploadAudio {
+      width: auto;
+      height: auto;
+      border-color: aqua;
   }
 
 
