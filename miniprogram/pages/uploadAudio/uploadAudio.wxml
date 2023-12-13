@@ -1,0 +1,11 @@
+<view>
+    <view>
+        <text>上传方式：先将音频分享到任意微信会话（如文件传输助手），再点击上传</text>
+    </view>
+    <view wx:if="{{condition === 1}}"> 
+        <text>{{filePath}}</text>
+    </view>
+    <view>
+        <button bind:tap="upload">上传音频</button>
+    </view>
+</view>

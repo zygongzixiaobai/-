@@ -1,5 +1,5 @@
 <view class="body">
-    <view class="page_head">
+    <view class="page_head" style="background-image: url(../../images/home/userbgimage.png); background-size: 100% 100%;">
         <view class="head">
             <image class="headImage" src="{{avatarUrl}}"></image>
                 <view class="username">
@@ -12,27 +12,27 @@
   <view class="detail">
     <view class="line3"></view>
     <view class="table" bindtap="GotoBlank">
-        <image src="../../images/userzz.png"></image>
+        <!-- <image src="../../images/userzz.png"></image> -->
         <view>个人信息</view>
         <image src="../../images/xiala.png" style="margin-left:auto"></image>
     </view>
     <view class="line2"></view>
     <view class="table" bindtap="GotoBlank">
-        <image src="../../images/history.png"></image>
+        <!-- <image src="../../images/history.png"></image> -->
         <view>历史查询</view>
         <image src="../../images/xiala.png" style="margin-left:auto"></image>
     </view>
     <view class="line2"></view>
 
     <view class="table" bindtap="GotoBlank">
-        <image src="../../images/fankui.png"></image>
+        <!-- <image src="../../images/fankui.png"></image> -->
         <view>意见反馈</view>
         <image src="../../images/xiala.png" style="margin-left:auto"></image>
     </view>
     <view class="line2"></view>
     <view class="table" bindtap="GotoBlank">
-        <image src="../../images/guanyu.png"></image>
-        <view>更多信息</view>
+        <!-- <image src="../../images/guanyu.png"></image> -->
+        <view>关于我们</view>
         <image src="../../images/xiala.png" style="margin-left:auto"></image>
     </view>
     <view class="line2"></view>

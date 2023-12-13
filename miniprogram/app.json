@@ -5,7 +5,9 @@
         "pages/user/user",
         "pages/foodDetail/foodDetail",
         "pages/record/record",
-        "pages/blank/blank"
+        "pages/blank/blank",
+        "pages/uploadAudio/uploadAudio"
+        
     ],
     "permission": {
       "scope.userLocation": {

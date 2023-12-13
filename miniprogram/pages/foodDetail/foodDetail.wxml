@@ -23,10 +23,12 @@
 	                 <view ></view><view ></view>
                     </view>
                 </view>
-   <button style="width: 150px; background-color: #14dbe9;"  class="uploadTip" bindtap="upload" type="primary"> 上传检测语音 </button>
+   <button style="width: 150px; background-color: #14dbe9;"  class="uploadTip" bindtap="upload" type="primary"> 现在录音 </button>
+   <button style="width: 150px; background-color: #14dbe9;"  class="uploadTip" type="primary" bindtap="uploadAudio"> 上传已有音频 </button>
    <view wx:if="{{condition === 1}}"> 
    <text>{{tempFilePath}}</text>
    </view>
+   
    <button style="width: 150px; background-color: #14dbe9;"  class="uploadTip" bindtap="playRecord" type="primary"> 播放语音 </button>
    <button style="width: 150px; background-color: #14dbe9; margin-bottom: 50px;"  class="uploadTip" bindtap="public" type="primary"> 开始检测 </button>
 </view>

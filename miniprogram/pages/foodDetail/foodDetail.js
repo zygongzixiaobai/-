@@ -90,6 +90,12 @@ Page({
       })
     },
 
+    uploadAudio(){
+        wx.navigateTo({
+          url: '/pages/uploadAudio/uploadAudio',
+        })
+    },
+
     playRecord(){
         const innerAudioContext = wx.createInnerAudioContext();
         innerAudioContext.src = this.data.tempFilePath;
